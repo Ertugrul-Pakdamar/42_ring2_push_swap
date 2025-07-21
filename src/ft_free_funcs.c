@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main.c                                          :+:      :+:    :+:   */
+/*   ft_free_funcs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/21 15:27:20 by epakdama         ###   ########.fr       */
+/*   Created: 2025/07/21 15:23:48 by epakdama          #+#    #+#             */
+/*   Updated: 2025/07/21 15:25:31 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-#include <stdio.h>
 
-// FOR TESTS
-void	f(int i)
+void	ft_exit_prog(t_list *list, int exit_code)
 {
-	printf("%d\n", i);
-}
-
-int	main(int argc, char **argv)
-{
-	t_list	*stack_a;
-
-	if (argc == 1)
-		return (1);
-	stack_a = ft_set_list(&argv[1]);
-	ft_lstiter(stack_a, f);
+	ft_lstclear(&list, free);
+	ft_putstr_fd("Program shutting down.", 2);
+	exit(exit_code);
 }

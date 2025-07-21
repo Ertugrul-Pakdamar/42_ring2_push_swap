@@ -3,7 +3,8 @@ LIBS = libft/libft.a
 
 SRC = ft_main.c \
 		src/ft_rules.c \
-		src/ft_set_list.c
+		src/ft_set_list.c \
+		src/ft_free_funcs.c 
 
 GREEN=\033[0;32m
 SET_DEF=\033[0m
