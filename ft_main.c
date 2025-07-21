@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
+/*   Updated: 2025/07/21 15:10:39 by epakdama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_push_swap.h"
+#include <stdio.h>
+
+// FOR TESTS
+void	f(void *s)
+{
+	printf("%s\n", (char *)s);
+}
+
+int	main(int argc, char **argv)
+{
+	t_list	*stack_a;
+
+	if (argc == 1)
+		return (1);
+	stack_a = ft_set_list(&argv[1]);
+}
