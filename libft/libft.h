@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:13:55 by epakdama          #+#    #+#             */
-/*   Updated: 2025/06/04 11:36:43 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/21 15:19:07 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_list
 {
-	void			*content;
+	int				content;
 	struct s_list	*next;
 }					t_list;
 
