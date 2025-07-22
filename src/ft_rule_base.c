@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:27:08 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 09:22:11 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:27:13 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static void	ft_rotate(t_list **stack_a, t_list **stack_b, int rule)
 static void	ft_push(t_list **stack_a, t_list **stack_b, int rule)
 {
 	if (rule == PA)
-		ft_push_stack(stack_a);
+		ft_push_stack(stack_a, stack_b);
 	if (rule == PB)
-		ft_push_stack(stack_b);
+		ft_push_stack(stack_b, stack_a);
 }
 
 static void	ft_swap(t_list **stack_a, t_list **stack_b, int rule)

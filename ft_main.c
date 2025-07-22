@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 10:08:30 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 12:13:45 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,17 @@ void	f(int i)
 int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
+	t_list	*stack_b;
 
 	if (argc == 1)
 		return (1);
+	stack_b = NULL;
+	printf("------First------\n");
 	stack_a = ft_set_list(&argv[1]);
 	ft_lstiter(stack_a, f);
-	ft_rule_base(&stack_a, NULL, SA);
+	printf("------Rotate------\n");
+	ft_rule_base(&stack_a, &stack_b, RRA);
 	ft_lstiter(stack_a, f);
 	ft_lstclear(&stack_a, free);
+	ft_lstclear(&stack_b, free);
 }

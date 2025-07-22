@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:31:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 09:22:49 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:27:25 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_exit_prog(t_list *list, int exit_code);
 int		ft_is_input_valid(char *arg);
 void	ft_rule_base(t_list **stack_a, t_list **stack_b, int rule);
 void	ft_swap_stack(t_list **stack);
-void	ft_push_stack(t_list **stack);
+void	ft_push_stack(t_list **stack_a, t_list **stack_b);
 void	ft_rotate_stack(t_list **stack);
 void	ft_reverse_rotate_stack(t_list **stack);
 
