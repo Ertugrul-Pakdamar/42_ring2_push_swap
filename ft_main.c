@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 12:21:40 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 15:17:04 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int	main(int argc, char **argv)
 		return (1);
 	stack_b = NULL;
 	stack_a = ft_set_list(&argv[1]);
-	ft_exit_prog(&stack_a, &stack_b, 0);
+	ft_exit_prog(&stack_a, &stack_b, NULL, 0);
 }
