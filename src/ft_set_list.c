@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 09:52:51 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 12:21:00 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_set_list(char **argv)
 	while (argv[i])
 		total_args = ft_strjoin(total_args, argv[i++]);
 	if (!ft_is_input_valid(total_args))
-		exit(1);
+		ft_exit_prog(NULL, NULL, 1);
 	splitted_args = ft_split(total_args, ' ');
 	free(total_args);
 	stack = ft_lstnew(ft_atoi(splitted_args[0]));
