@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 08:40:41 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:08:30 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (1);
 	stack_a = ft_set_list(&argv[1]);
+	ft_lstiter(stack_a, f);
+	ft_rule_base(&stack_a, NULL, SA);
 	ft_lstiter(stack_a, f);
 	ft_lstclear(&stack_a, free);
 }

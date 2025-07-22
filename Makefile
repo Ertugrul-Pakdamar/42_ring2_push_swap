@@ -2,6 +2,7 @@ NAME = push_swap
 LIBS = libft/libft.a
 
 SRC = ft_main.c \
+		src/ft_rule_base.c \
 		src/ft_rules.c \
 		src/ft_set_list.c \
 		src/ft_free_funcs.c \

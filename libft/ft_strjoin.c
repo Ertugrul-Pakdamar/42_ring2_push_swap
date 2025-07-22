@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:12:43 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 08:44:26 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:07:14 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
+	char	*tmp;
 	int		index1;
 	int		index2;
 
@@ -23,9 +24,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 2);
 	if (res == NULL)
 		return (NULL);
+	tmp = (char *)s1;
 	index1 = -1;
-	while (s1[++index1])
-		res[index1] = s1[index1];
+	while (tmp[++index1])
+		res[index1] = tmp[index1];
+	if (ft_strncmp(tmp, "", ft_strlen(tmp)) != 0)
+		free(tmp);
 	res[index1] = ' ';
 	index1++;
 	index2 = -1;
