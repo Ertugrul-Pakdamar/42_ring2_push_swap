@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.h                                     :+:      :+:    :+:   */
+/*   ft_validations.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 14:31:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 08:12:25 by epakdama         ###   ########.fr       */
+/*   Created: 2025/07/22 08:10:55 by epakdama          #+#    #+#             */
+/*   Updated: 2025/07/22 08:31:01 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP
-# define FT_PUSH_SWAP
+#include "ft_push_swap.h"
 
-# include "libft.h"
-# include <stdlib.h>
-# include <unistd.h>
+int	ft_is_input_valid(char *arg)
+{
+	int	i;
 
-t_list	*ft_set_list(char **argv);
-void	ft_exit_prog(t_list *list, int exit_code);
-int		ft_is_input_valid(char *arg);
-
-#endif
+	i = 0;
+	while (arg[i])
+	{
+		if ((arg[i] > '9' || arg[i] < '0') && arg[i] != ' ')
+			return (0);
+		i++;
+	}
+	return (1);
+}
