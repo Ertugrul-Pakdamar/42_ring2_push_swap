@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 13:45:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 15:18:42 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/22 15:20:58 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_custom_atoi(char *str, int *res)
 {
-	int index;
-	long result;
-	int symbol;
+	int		index;
+	long	result;
+	int		symbol;
 
 	result = 0;
 	symbol = 1;
