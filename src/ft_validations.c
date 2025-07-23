@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 08:10:55 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 08:31:01 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/23 22:43:30 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	ft_is_input_valid(char *arg)
 	i = 0;
 	while (arg[i])
 	{
-		if ((arg[i] > '9' || arg[i] < '0') && arg[i] != ' ')
+		if ((arg[i] > '9' || arg[i] < '0') && arg[i] != ' ' && arg[i] != '-'
+			&& arg[i] != '+')
 			return (0);
 		i++;
 	}

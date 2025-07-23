@@ -6,11 +6,12 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 13:45:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 15:20:58 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/23 22:48:50 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+#include <stdio.h>
 
 int	ft_custom_atoi(char *str, int *res)
 {
@@ -32,7 +33,7 @@ int	ft_custom_atoi(char *str, int *res)
 		result = (result * 10) + (str[index] - '0');
 		index++;
 	}
-	if (result <= INT_MAX && result >= INT_MIN)
+	if (result * symbol <= INT_MAX && result * symbol >= INT_MIN)
 		*res = (result * symbol);
 	else
 		return (0);
