@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 11:45:51 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 12:04:48 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 12:21:28 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,14 @@ static unsigned long	ft_max_bit_len(t_list *stack)
 	return (digits);
 }
 
-void	ft_set_bits_to_zero(t_list *stack)
+static unsigned long	ft_set_bits_to_zero(t_list *stack)
 {
 	t_list			*temp;
 	unsigned long	digits;
+	unsigned long	res;
 
 	temp = stack;
+	res = ft_max_bit_len(stack);
 	while (temp)
 	{
 		digits = ft_max_bit_len(stack);
@@ -49,9 +51,33 @@ void	ft_set_bits_to_zero(t_list *stack)
 			temp->bit[digits] = '0';
 		temp = temp->next;
 	}
+	return (digits);
+}
+
+static void	ft_get_bits(t_list *stack, char const *base, unsigned long digits)
+{
+	int			i;
+	long long	bits;
+
+	bits = stack->id;
+	i = 0;
+	while (bits > 0)
+	{
+		stack->bit[i++] = base[bits % 2];
+		bits /= 2;
+	}
 }
 
 void	ft_convert_bits(t_list *stack)
 {
-	ft_set_bits_to_zero(stack);
+	t_list			*temp;
+	unsigned long	digits;
+
+	digits = ft_set_bits_to_zero(stack);
+	temp = stack;
+	while (temp)
+	{
+		ft_get_bits(stack, "01", digits);
+		temp = temp->next;
+	}
 }
