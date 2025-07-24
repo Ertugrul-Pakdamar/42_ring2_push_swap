@@ -6,13 +6,13 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 15:23:48 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 09:08:12 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:24:26 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-void	ft_exit_prog(t_stack **stack_a, t_stack **stack_b, void ***arr,
+void	ft_exit_prog(t_list **stack_a, t_list **stack_b, void ***arr,
 		int exit_code)
 {
 	int	i;

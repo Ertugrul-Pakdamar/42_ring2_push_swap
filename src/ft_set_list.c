@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 09:08:12 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:25:27 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_join_args(char **argv)
 	return (res);
 }
 
-t_stack	*ft_set_list(char **argv)
+t_list	*ft_set_list(char **argv)
 {
-	t_stack	*stack;
+	t_list	*stack;
 	char	*total_args;
 	char	**splitted_args;
 	int		i;
