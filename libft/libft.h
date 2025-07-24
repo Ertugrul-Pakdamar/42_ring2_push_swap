@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:13:55 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 09:24:06 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 10:32:59 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_list
 {
 	int				content;
-	unsigned long	id;
+	long			id;
 	struct s_list	*next;
 }					t_list;
 

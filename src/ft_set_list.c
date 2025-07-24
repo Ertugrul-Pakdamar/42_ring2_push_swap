@@ -6,13 +6,13 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 09:25:27 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:29:06 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-char	*ft_join_args(char **argv)
+static char	*ft_join_args(char **argv)
 {
 	int		i;
 	char	*res;
@@ -22,6 +22,14 @@ char	*ft_join_args(char **argv)
 	while (argv[i])
 		res = ft_strjoin(res, argv[i++]);
 	return (res);
+}
+
+static void	ft_initial_stack(t_list **stack, char ***splitted_args, int *ans)
+{
+	if (ft_custom_atoi((*splitted_args)[0], ans))
+		*stack = ft_lstnew(*ans);
+	else
+		ft_exit_prog(stack, NULL, ((void ***)splitted_args), 1);
 }
 
 t_list	*ft_set_list(char **argv)
@@ -37,10 +45,7 @@ t_list	*ft_set_list(char **argv)
 		ft_exit_prog(NULL, NULL, NULL, 1);
 	splitted_args = ft_split(total_args, ' ');
 	free(total_args);
-	if (ft_custom_atoi(splitted_args[0], &ans))
-		stack = ft_lstnew(ans);
-	else
-		ft_exit_prog(&stack, NULL, ((void ***)&splitted_args), 1);
+	ft_initial_stack(&stack, &splitted_args, &ans);
 	i = 1;
 	while (splitted_args[i])
 	{

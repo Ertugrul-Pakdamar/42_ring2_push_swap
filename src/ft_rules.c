@@ -6,12 +6,11 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 09:03:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 09:25:20 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 10:15:34 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-#include <stdio.h>
 
 void	ft_swap_stack(t_list **stack)
 {
