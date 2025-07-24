@@ -8,7 +8,8 @@ SRC = ft_main.c \
 		src/ft_free_funcs.c \
 		src/ft_validations.c \
 		src/ft_custom_ft.c \
-		src/ft_number_stack.c 
+		src/ft_number_stack.c \
+		src/ft_convert_bits.c 
 
 GREEN=\033[0;32m
 SET_DEF=\033[0m

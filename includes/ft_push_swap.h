@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:31:40 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 11:39:50 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 11:57:35 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	ft_push_stack(t_list **stack_a, t_list **stack_b);
 void	ft_rotate_stack(t_list **stack);
 void	ft_reverse_rotate_stack(t_list **stack);
 void	ft_number_stack(t_list *stack);
+void	ft_convert_bits(t_list *stack);
 int		ft_custom_atoi(char *str, int *res);
 
 #endif
