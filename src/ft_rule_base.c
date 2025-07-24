@@ -6,13 +6,13 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:27:08 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 10:27:13 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:08:12 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-static void	ft_rotate(t_list **stack_a, t_list **stack_b, int rule)
+static void	ft_rotate(t_stack **stack_a, t_stack **stack_b, int rule)
 {
 	if (rule == RA)
 		ft_rotate_stack(stack_a);
@@ -25,7 +25,7 @@ static void	ft_rotate(t_list **stack_a, t_list **stack_b, int rule)
 	}
 }
 
-static void	ft_push(t_list **stack_a, t_list **stack_b, int rule)
+static void	ft_push(t_stack **stack_a, t_stack **stack_b, int rule)
 {
 	if (rule == PA)
 		ft_push_stack(stack_a, stack_b);
@@ -33,7 +33,7 @@ static void	ft_push(t_list **stack_a, t_list **stack_b, int rule)
 		ft_push_stack(stack_b, stack_a);
 }
 
-static void	ft_swap(t_list **stack_a, t_list **stack_b, int rule)
+static void	ft_swap(t_stack **stack_a, t_stack **stack_b, int rule)
 {
 	if (rule == SA)
 		ft_swap_stack(stack_a);
@@ -46,7 +46,7 @@ static void	ft_swap(t_list **stack_a, t_list **stack_b, int rule)
 	}
 }
 
-static void	ft_reverse(t_list **stack_a, t_list **stack_b, int rule)
+static void	ft_reverse(t_stack **stack_a, t_stack **stack_b, int rule)
 {
 	if (rule == RRA)
 		ft_reverse_rotate_stack(stack_a);
@@ -59,7 +59,7 @@ static void	ft_reverse(t_list **stack_a, t_list **stack_b, int rule)
 	}
 }
 
-void	ft_rule_base(t_list **stack_a, t_list **stack_b, int rule)
+void	ft_rule_base(t_stack **stack_a, t_stack **stack_b, int rule)
 {
 	if (rule == SA || rule == SB || rule == SS)
 		ft_swap(stack_a, stack_b, rule);

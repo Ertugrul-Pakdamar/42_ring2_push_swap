@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/23 23:32:28 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:08:12 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	f(int i)
 
 int	main(int argc, char **argv)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (argc == 1)
 		return (1);

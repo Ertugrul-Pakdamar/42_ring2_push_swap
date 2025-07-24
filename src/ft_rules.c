@@ -6,16 +6,16 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 09:03:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/22 12:15:19 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:08:12 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 #include <stdio.h>
 
-void	ft_swap_stack(t_list **stack)
+void	ft_swap_stack(t_stack **stack)
 {
-	t_list	*temp;
+	t_stack	*temp;
 
 	if (!stack)
 		return ;
@@ -25,9 +25,9 @@ void	ft_swap_stack(t_list **stack)
 	(*stack)->next = temp;
 }
 
-void	ft_push_stack(t_list **stack_a, t_list **stack_b)
+void	ft_push_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	t_list	*temp;
+	t_stack	*temp;
 
 	if (!stack_a)
 		return ;
@@ -37,9 +37,9 @@ void	ft_push_stack(t_list **stack_a, t_list **stack_b)
 	ft_lstdelone(temp, free);
 }
 
-void	ft_rotate_stack(t_list **stack)
+void	ft_rotate_stack(t_stack **stack)
 {
-	t_list	*temp;
+	t_stack	*temp;
 
 	if (!stack)
 		return ;
@@ -49,10 +49,10 @@ void	ft_rotate_stack(t_list **stack)
 	ft_lstlast(*stack)->next = temp;
 }
 
-void	ft_reverse_rotate_stack(t_list **stack)
+void	ft_reverse_rotate_stack(t_stack **stack)
 {
-	t_list	*temp;
-	t_list	*temp1;
+	t_stack	*temp;
+	t_stack	*temp1;
 
 	if (!stack)
 		return ;
