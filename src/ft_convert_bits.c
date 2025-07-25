@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 11:45:51 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 12:21:28 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/25 10:26:56 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static unsigned long	ft_set_bits_to_zero(t_list *stack)
 	return (digits);
 }
 
-static void	ft_get_bits(t_list *stack, char const *base, unsigned long digits)
+static void	ft_get_bits(t_list *stack, char const *base)
 {
 	int			i;
 	long long	bits;
@@ -77,7 +77,7 @@ void	ft_convert_bits(t_list *stack)
 	temp = stack;
 	while (temp)
 	{
-		ft_get_bits(stack, "01", digits);
+		ft_get_bits(temp, "01");
 		temp = temp->next;
 	}
 }
