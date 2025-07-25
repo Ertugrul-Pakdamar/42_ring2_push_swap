@@ -1,0 +1,1 @@
+Bitwise çevrlirken tersten çevriliyor tam tersine çevireceksin
