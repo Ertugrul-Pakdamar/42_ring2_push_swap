@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 11:45:51 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/25 10:26:56 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/27 20:52:48 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ static unsigned long	ft_set_bits_to_zero(t_list *stack)
 {
 	t_list			*temp;
 	unsigned long	digits;
-	unsigned long	res;
 
 	temp = stack;
-	res = ft_max_bit_len(stack);
+	ft_max_bit_len(stack);
 	while (temp)
 	{
 		digits = ft_max_bit_len(stack);
 		temp->bit = (char *)malloc((digits * sizeof(char)) + 1);
+		temp->bit[digits] = '\0';
 		while (digits-- > 0)
 			temp->bit[digits] = '0';
 		temp = temp->next;
@@ -60,20 +60,19 @@ static void	ft_get_bits(t_list *stack, char const *base)
 	long long	bits;
 
 	bits = stack->id;
-	i = 0;
+	i = ft_strlen(stack->bit) - 1;
 	while (bits > 0)
 	{
-		stack->bit[i++] = base[bits % 2];
+		stack->bit[i--] = base[bits % 2];
 		bits /= 2;
 	}
 }
 
 void	ft_convert_bits(t_list *stack)
 {
-	t_list			*temp;
-	unsigned long	digits;
+	t_list	*temp;
 
-	digits = ft_set_bits_to_zero(stack);
+	ft_set_bits_to_zero(stack);
 	temp = stack;
 	while (temp)
 	{

@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 08:39:35 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/24 10:24:01 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/27 21:23:00 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ t_list	*ft_lstnew(int content)
 	new->content = content;
 	new->id = -1;
 	new->next = NULL;
+	new->bit = NULL;
 	return (new);
 }

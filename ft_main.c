@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/25 10:27:01 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/27 20:43:22 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
+	t_list	*temp;
 
 	if (argc == 1)
 		return (1);
@@ -30,6 +31,12 @@ int	main(int argc, char **argv)
 	stack_a = ft_set_list(&argv[1]);
 	ft_number_stack(stack_a);
 	ft_convert_bits(stack_a);
+	temp = stack_a;
+	while (temp)
+	{
+		printf("Bits: %s\n", temp->bit);
+		temp = temp->next;
+	}
 	ft_lstclear(&stack_a, free);
 	ft_exit_prog(&stack_a, &stack_b, NULL, 0);
 }
