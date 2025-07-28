@@ -6,12 +6,11 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:21:55 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:53:35 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-#include <stdio.h>
 
 static char	*ft_join_args(char **argv)
 {
