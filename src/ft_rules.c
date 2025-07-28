@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 09:03:42 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 14:30:45 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:38:59 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_push_stack(t_list **stack_a, t_list **stack_b)
 
 	if (!stack_a || !*stack_a)
 		return ;
-	ft_lstadd_back(stack_b, ft_copy_node(*stack_a));
+	ft_lstadd_front(stack_b, ft_copy_node(*stack_a));
 	temp = *stack_a;
 	*stack_a = (*stack_a)->next;
 	ft_lstdelone(temp, free);

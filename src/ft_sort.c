@@ -6,32 +6,37 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:54:52 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:32:30 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:50:45 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+#include <stdio.h>
 
-void	ft_sort(t_list **stack_a, t_list **stack_b, int digits, int size)
+void	ft_sort(t_list **stack_a, t_list **stack_b, int size)
 {
-	int	i;
-	int	j;
-	int	bit_index;
+	long	i;
+	long	j;
+	long	bit_index;
 
 	i = 0;
-	while (i <= digits)
+	while (i <= (long)ft_strlen((*stack_a)->bit) - 1)
 	{
 		j = size;
 		while (j-- > 0)
 		{
 			bit_index = ft_strlen((*stack_a)->bit) - 1 - i;
-			if ((*stack_a)->bit[bit_index] == '1')
+			if ((*stack_a)->bit[bit_index] == '0')
 				ft_rule_base(stack_a, stack_b, "pb");
 			else
 				ft_rule_base(stack_a, stack_b, "ra");
+			if (is_sorted(*stack_a))
+				break ;
 		}
 		while (*stack_b)
 			ft_rule_base(stack_a, stack_b, "pa");
+		if (is_sorted(*stack_a))
+			break ;
 		i++;
 	}
 }
