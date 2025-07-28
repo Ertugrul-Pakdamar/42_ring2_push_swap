@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:54:52 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:53:38 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 16:35:44 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void	ft_sort(t_list **stack_a, t_list **stack_b, int size)
 				ft_rule_base(stack_a, stack_b, "pb");
 			else
 				ft_rule_base(stack_a, stack_b, "ra");
-			if (is_sorted(*stack_a))
+			if (ft_is_sorted(*stack_a))
 				break ;
 		}
 		while (*stack_b)
 			ft_rule_base(stack_a, stack_b, "pa");
-		if (is_sorted(*stack_a))
+		if (ft_is_sorted(*stack_a))
 			break ;
 		i++;
 	}

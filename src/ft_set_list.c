@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 16:31:58 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 16:35:32 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	ft_check_valid_number(char **splitted_args)
 	i = 0;
 	while (splitted_args[i])
 	{
-		if (!is_valid_number(splitted_args[i]))
+		if (!ft_is_valid_number(splitted_args[i]))
 			ft_exit_prog(NULL, NULL, ((void ***)&splitted_args), -1);
 		i++;
 	}
