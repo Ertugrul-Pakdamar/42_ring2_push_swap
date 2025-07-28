@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 15:23:48 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/25 10:27:33 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:16:52 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	ft_exit_prog(t_list **stack_a, t_list **stack_b, void ***arr,
 			free((*arr)[i++]);
 		free(*arr);
 	}
-	if (exit_code == 1)
-		ft_putstr_fd("Program shutting down with error.\n", 2);
-	else if (exit_code == 0)
-		ft_putstr_fd("Program shutting down with success.\n", 2);
+	if (exit_code == -1)
+		ft_putstr_fd("Error\n", 3);
 	exit(exit_code);
 }

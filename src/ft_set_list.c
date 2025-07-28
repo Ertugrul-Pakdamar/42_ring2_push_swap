@@ -6,11 +6,12 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/27 21:22:49 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:21:55 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+#include <stdio.h>
 
 static char	*ft_join_args(char **argv)
 {
@@ -29,7 +30,7 @@ static void	ft_initial_stack(t_list **stack, char ***splitted_args, int *ans)
 	if (ft_custom_atoi((*splitted_args)[0], ans))
 		*stack = ft_lstnew(*ans);
 	else
-		ft_exit_prog(stack, NULL, ((void ***)&(*splitted_args)), 1);
+		ft_exit_prog(stack, NULL, ((void ***)&(*splitted_args)), -1);
 }
 
 t_list	*ft_set_list(char **argv)
@@ -42,7 +43,7 @@ t_list	*ft_set_list(char **argv)
 
 	total_args = ft_join_args(argv);
 	if (!ft_is_input_valid(total_args))
-		ft_exit_prog(NULL, NULL, NULL, 1);
+		ft_exit_prog(NULL, NULL, NULL, -1);
 	splitted_args = ft_split(total_args, ' ');
 	free(total_args);
 	ft_initial_stack(&stack, &splitted_args, &ans);
@@ -52,7 +53,7 @@ t_list	*ft_set_list(char **argv)
 		if (ft_custom_atoi(splitted_args[i++], &ans))
 			ft_lstadd_back(&stack, ft_lstnew(ans));
 		else
-			ft_exit_prog(&stack, NULL, ((void ***)&splitted_args), 1);
+			ft_exit_prog(&stack, NULL, ((void ***)&splitted_args), -1);
 	}
 	i = 0;
 	while (splitted_args[i])
