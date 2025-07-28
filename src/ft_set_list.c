@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:53:35 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 16:31:58 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,19 @@ static void	ft_initial_stack(t_list **stack, char ***splitted_args, int *ans)
 		ft_exit_prog(stack, NULL, ((void ***)&(*splitted_args)), -1);
 }
 
+static void	ft_check_valid_number(char **splitted_args)
+{
+	int		i;
+
+	i = 0;
+	while (splitted_args[i])
+	{
+		if (!is_valid_number(splitted_args[i]))
+			ft_exit_prog(NULL, NULL, ((void ***)&splitted_args), -1);
+		i++;
+	}
+}
+
 t_list	*ft_set_list(char **argv)
 {
 	t_list	*stack;
@@ -41,9 +54,10 @@ t_list	*ft_set_list(char **argv)
 	int		ans;
 
 	total_args = ft_join_args(argv);
-	if (!ft_is_input_valid(total_args))
+	if (ft_is_input_valid(total_args) == 0)
 		ft_exit_prog(NULL, NULL, NULL, -1);
 	splitted_args = ft_split(total_args, ' ');
+	ft_check_valid_number(splitted_args);
 	free(total_args);
 	ft_initial_stack(&stack, &splitted_args, &ans);
 	i = 1;

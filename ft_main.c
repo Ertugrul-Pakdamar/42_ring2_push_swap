@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:53:32 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 16:26:33 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	main(int argc, char **argv)
 		ft_exit_prog(NULL, NULL, NULL, -1);
 	stack_b = NULL;
 	stack_a = ft_set_list(&argv[1]);
+	if (ft_is_duplicate(stack_a))
+		ft_exit_prog(&stack_a, &stack_b, NULL, -1);
 	ft_number_stack(stack_a);
 	ft_convert_bits(stack_a);
 	if (is_sorted(stack_a))

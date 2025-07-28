@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 15:23:48 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 15:16:52 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:57:35 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	ft_exit_prog(t_list **stack_a, t_list **stack_b, void ***arr,
 		free(*arr);
 	}
 	if (exit_code == -1)
-		ft_putstr_fd("Error\n", 3);
+		ft_putstr_fd("Error\n", 2);
 	exit(exit_code);
 }
