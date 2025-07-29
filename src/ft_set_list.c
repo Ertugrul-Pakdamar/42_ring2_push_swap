@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/29 10:44:01 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:35:18 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	ft_initial_stack(t_list **stack, char ***splitted_args, int *ans)
 	if (ft_custom_atoi((*splitted_args)[0], ans))
 		*stack = ft_lstnew(*ans);
 	else
-		ft_exit_prog(stack, NULL, ((void ***)&(*splitted_args)), -1);
+		ft_exit_prog(NULL, NULL, ((void ***)&(*splitted_args)), -1);
 }
 
 t_list	*ft_set_list(char **argv)
