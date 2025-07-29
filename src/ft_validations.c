@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 08:10:55 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 16:36:49 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/07/29 10:39:57 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,6 @@ int	ft_is_duplicate(t_list *stack)
 		current = current->next;
 	}
 	return (0);
-}
-
-int	ft_is_valid_number(char *str)
-{
-	int		i;
-
-	i = 0;
-	if (str[0] == '-' || str[0] == '+')
-		i++;
-	if (!str[i])
-		return (0);
-	if (str[i] == '0' && str[i + 1])
-		return (0);
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
 }
 
 int	ft_is_input_valid(char *arg)
