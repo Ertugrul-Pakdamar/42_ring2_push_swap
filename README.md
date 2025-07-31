@@ -1,48 +1,51 @@
 # Push Swap 🔄
 
-Bu proje, iki yığını (stack) minimum hamle sayısında sıralamayı amaçlayan bir algoritma projesidir.
+This project is an algorithmic challenge that aims to sort two stacks with the minimum number of operations.
 
-## Proje Hakkında 📝
+---
+> 🚧 **Status:** Completed
 
-Push Swap, verilen sayı dizisini özel kurallar çerçevesinde sıralamamızı isteyen bir 42 projesidir. İki adet stack (A ve B) kullanarak, belirli komutlarla sayıları sıralamamız gerekiyor.
+## About The Project 📝
 
-### Kullanılan Komutlar 🛠️
+Push Swap is a 42 School project that requires us to sort a given array of numbers using two stacks (A and B) with a specific set of operations. The goal is to achieve this sorting with the minimum number of moves possible.
 
-- `sa` : stack a'nın en üstündeki iki elemanı değiştirir
-- `sb` : stack b'nin en üstündeki iki elemanı değiştirir
-- `ss` : sa ve sb aynı anda
-- `pa` : stack b'nin en üstündeki elemanı stack a'ya taşır
-- `pb` : stack a'nın en üstündeki elemanı stack b'ye taşır
-- `ra` : stack a'daki tüm elemanları yukarı kaydırır
-- `rb` : stack b'deki tüm elemanları yukarı kaydırır
-- `rr` : ra ve rb aynı anda
-- `rra` : stack a'daki tüm elemanları aşağı kaydırır
-- `rrb` : stack b'deki tüm elemanları aşağı kaydırır
-- `rrr` : rra ve rrb aynı anda
+### Available Operations 🛠️
 
-## Kullanım 💻
+- `sa` : swap the first 2 elements at the top of stack a
+- `sb` : swap the first 2 elements at the top of stack b
+- `ss` : sa and sb at the same time
+- `pa` : take the first element at the top of b and put it at the top of a
+- `pb` : take the first element at the top of a and put it at the top of b
+- `ra` : rotate all elements of stack a up by 1
+- `rb` : rotate all elements of stack b up by 1
+- `rr` : ra and rb at the same time
+- `rra` : rotate all elements of stack a down by 1
+- `rrb` : rotate all elements of stack b down by 1
+- `rrr` : rra and rrb at the same time
+
+## Usage 💻
 
 ```bash
 make
 ./push_swap 5 2 3 1 4
 ```
 
-### Derleme 🔨
+### Building 🔨
 
 ```bash
-make        # Programı derler
-make clean  # Obje dosyalarını siler
-make fclean # Tüm derlenmiş dosyaları siler
-make re     # Yeniden derler
+make        # Compile the program
+make clean  # Remove object files
+make fclean # Remove all compiled files
+make re     # Recompile everything
 ```
 
-## Algoritma 🧮
+## Algorithm 🧮
 
-Program, radix sort algoritması kullanarak sayıları sıralamaktadır. Her sayı önce indexlenir, sonra binary formata çevrilir ve bit'lerine göre sıralama yapılır.
+The program implements a radix sort algorithm to sort the numbers. Each number is first indexed, then converted to binary format, and sorted based on their bits.
 
-## Test Sonuçları 📊
+## Test Results 📊
 
-- 3 sayı için: 2-3 hamle
-- 5 sayı için: 10-12 hamle
-- 100 sayı için: ~700 hamle
-- 500 sayı için: ~5500 hamle
+- For 3 numbers: 2-3 moves
+- For 5 numbers: 10-12 moves
+- For 100 numbers: ~700 moves
+- For 500 numbers: ~5500 moves
