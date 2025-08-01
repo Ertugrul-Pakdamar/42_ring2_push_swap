@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/08/01 11:02:36 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/08/01 16:22:39 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ int	main(int argc, char **argv)
 	ft_convert_bits(stack_a);
 	if (ft_is_sorted(stack_a))
 		ft_exit_prog(&stack_a, &stack_b, NULL, 0);
-	ft_sort(&stack_a, &stack_b, ft_lstsize(stack_a));
+	if (ft_lstsize(stack_a) > 5)
+		ft_sort(&stack_a, &stack_b, ft_lstsize(stack_a));
+	else if (ft_lstsize(stack_a) <= 5)
+		ft_sort_mini(&stack_a, &stack_b, ft_lstsize(stack_a));
 	ft_lstclear(&stack_a, free);
 	ft_exit_prog(&stack_a, &stack_b, NULL, 0);
 }
