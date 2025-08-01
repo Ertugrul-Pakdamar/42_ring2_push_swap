@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 08:10:55 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/29 10:39:57 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/08/01 11:08:19 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,19 @@ int	ft_is_duplicate(t_list *stack)
 	return (0);
 }
 
-int	ft_is_input_valid(char *arg)
+int	ft_is_input_valid(char **arg)
 {
 	int	i;
 
 	i = 0;
-	while (arg[i])
+	while ((*arg)[i])
 	{
-		if (ft_isdigit(arg[i]) == 0 && arg[i] != ' ' && arg[i] != '-'
-			&& arg[i] != '+')
-			return (0);
-		if ((arg[i] == '-' || arg[i] == '+') && (arg[i - 1] != ' '
-				|| ft_isdigit(arg[i + 1]) != 1))
-			return (0);
+		if (ft_isdigit((*arg)[i]) == 0 && (*arg)[i] != ' ' && (*arg)[i] != '-'
+			&& (*arg)[i] != '+')
+			return (free(*arg), 0);
+		if (((*arg)[i] == '-' || (*arg)[i] == '+') && ((*arg)[i - 1] != ' '
+				|| ft_isdigit((*arg)[i + 1]) != 1))
+			return (free(*arg), 0);
 		i++;
 	}
 	return (1);

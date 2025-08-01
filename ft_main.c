@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:23:20 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/28 16:35:14 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/08/01 11:02:36 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	t_list	*stack_b;
 
 	if (argc == 1)
-		ft_exit_prog(NULL, NULL, NULL, -1);
+		ft_exit_prog(NULL, NULL, NULL, -2);
 	stack_b = NULL;
 	stack_a = ft_set_list(&argv[1]);
 	if (ft_is_duplicate(stack_a))

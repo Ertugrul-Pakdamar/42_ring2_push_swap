@@ -6,7 +6,7 @@
 /*   By: epakdama <epakdama@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:53:21 by epakdama          #+#    #+#             */
-/*   Updated: 2025/07/29 13:35:18 by epakdama         ###   ########.fr       */
+/*   Updated: 2025/08/01 11:07:44 by epakdama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_list	*ft_set_list(char **argv)
 	int		ans;
 
 	total_args = ft_join_args(argv);
-	if (ft_is_input_valid(total_args) == 0)
+	if (ft_is_input_valid(&total_args) == 0)
 		ft_exit_prog(NULL, NULL, NULL, -1);
 	splitted_args = ft_split(total_args, ' ');
 	free(total_args);
